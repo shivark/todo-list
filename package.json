@@ -1,0 +1,21 @@
+{
+  "name": "learn-ts",
+  "version": "0.0.1",
+  "description": "foo",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "typescript": "^1.8.10"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}
