@@ -41,6 +41,13 @@ module.exports = function (grunt) {
             dest: 'scripts/js',
             expand: true,
             filter: 'isFile'
+          },
+              {
+            cwd: 'node_modules/knockout/build/output',
+            src: 'knockout-latest.js',
+            dest: 'scripts/js',
+            expand: true,
+            filter: 'isFile'
           }
         ],
       },
