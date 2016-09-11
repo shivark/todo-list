@@ -1,1 +1,46 @@
-@import 'bootstrap-custom'
+@import 'bootstrap-custom';
+
+#todo-list-container{
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 25px;
+    margin-top: 20%;
+    
+    .form-group{
+        width: 280px;
+    }
+
+    #add-new-item-container{
+    padding-top: 25px;
+    input[type=text]{
+        width: 232px;
+        }
+    }
+
+    .item{
+        label{
+            display: inline-block;
+            width: 216px;
+            text-align: left;
+            }
+        .check-box{
+            display: inline-block;
+
+            input[type=checkbox]{
+                display: inline-block;
+                margin-left: 4px;
+            }
+        }
+    }
+
+    .form-group{
+        padding: 2px 0;
+    }
+    input[type=checkbox]:checked {
+        background: url(http://ramyasspace.files.wordpress.com/2011/06/tick.jpg);
+        background-size: 100%;
+    }
+}
+
+

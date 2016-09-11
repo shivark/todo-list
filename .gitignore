@@ -40,11 +40,12 @@ Thumbs.db
 #############
 node_modules
 node_modules/*
-
-#Modules#
-#############
 [Bb]ootstrap*
 **/[Bb]ootstrap
 [Bb]ootstrap/*
 .sass-cache
+
+#Files#
+*.map
+
 
