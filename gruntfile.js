@@ -16,13 +16,23 @@ module.exports = function (grunt) {
     },
     typescript: {
       base: {
-        src: ['scripts/ts/*.ts'],
-        dest: 'scripts/js',
+        src: ['scripts/ts/app/*.ts'],
+        dest: 'scripts/js/app/',
         options: {
           module: 'amd', //or commonjs 
           target: 'es5', //or es3 
-          sourceMap: true,
-          declaration: true
+          sourceMap: false,
+          declaration: false
+        }
+      },
+      specs: {
+        src: ['scripts/ts/specs/*.ts'],
+        dest: 'scripts/js/specs/',
+        options: {
+          module: 'amd', //or commonjs 
+          target: 'es5', //or es3 
+          sourceMap: false,
+          declaration: false
         }
       }
     },
@@ -38,14 +48,14 @@ module.exports = function (grunt) {
           {
             cwd: 'node_modules/bootstrap-sass/assets/javascripts',
             src: 'bootstrap.js',
-            dest: 'scripts/js',
+            dest: 'scripts/js/libs',
             expand: true,
             filter: 'isFile'
           },
-              {
+          {
             cwd: 'node_modules/knockout/build/output',
             src: 'knockout-latest.js',
-            dest: 'scripts/js',
+            dest: 'scripts/js/libs',
             expand: true,
             filter: 'isFile'
           }
@@ -60,7 +70,13 @@ module.exports = function (grunt) {
         src: 'src/<%= pkg.name %>.js',
         dest: 'build/<%= pkg.name %>.min.js'
       }
+    }, 
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js'
+      }
     }
+
   });
 
   // Load tasks.
@@ -68,9 +84,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-typescript');
+  grunt.loadNpmTasks('grunt-karma');
 
   // Default task(s).
   grunt.registerTask('default', ['uglify']);
-  grunt.registerTask('compile-all', ['copy', 'sass', 'typescript']);
-
+  grunt.registerTask('compile-all', ['sass', 'typescript','copy']);
+  grunt.registerTask('runtests', ['typescript:specs', 'copy', 'karma']);
 };
