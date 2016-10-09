@@ -14,42 +14,35 @@
         <div class="row">
             <div id="todo-list-container" class="vertical-center col-md-4 col-md-offset-4">
                 <form class="form-inline">
-                    <div class="form-group row item">
-                        <div class="check-box">
-                            <input type="checkbox">
-                        </div>
-                        <label class="item-added"> Item 1</label>
-                        <a role="button" href="#" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-                    </div>
-                       <div class="form-group row item">
-                        <div class="check-box">
-                            <input type="checkbox">
-                        </div>
-                        <label class="item-added"> Item 1</label>
-                        <a role="button" href="#" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-                    </div>
-                       <div class="form-group row item">
-                        <div class="check-box">
-                            <input type="checkbox">
-                        </div>
-                        <label class="item-added"> Item 1</label>
-                        <a role="button" href="#" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-                    </div>
+                    <ul data-bind="foreach:items">
+                        <li>
+                            <div class="form-group row item">
+                                <div class="check-box">
+                                    <input type="checkbox">
+                                </div>
+                                <label class="item-added" data-bind="text:name"> </label>
+                                <a role="button" href="#" class="btn btn-danger" data-bind="click: removeItem">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
                     <div class="form-group row" id="add-new-item-container">
                         <label for="new-item" class="text-hide">new item</label>
                         <input type="text" class="form-control" id="new-item" placeholder="Add an item here...">
-                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                        <button type="submit" class="btn btn-success" data-bind="click: addItem">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </button>
                     </div>
                 </form>
 
             </div>
         </div>
         <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script type='text/javascript' src="scripts/js/bootstrap.min.js"></script>
-        <script type='text/javascript' src='scripts/js/knockout-latest.js'></script>
+        <script type='text/javascript' src="scripts/js/libs/bootstrap.min.js"></script>
+        <script type='text/javascript' src='scripts/js/libs/knockout-latest.js'></script>
+        <script type='text/javascript' src='scripts/js/app/todo-list-viewmodel.js'></script>
+        <script type='text/javascript' src='scripts/js/app/todo-list-loader.js'></script>
 </body>
 
 </html>

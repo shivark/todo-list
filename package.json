@@ -4,6 +4,7 @@
   "description": "foo",
   "main": "index.js",
   "dependencies": {
+    "@types/knockout": "^3.4.36",
     "grunt": "^0.4.5",
     "knockout": "^3.4.0"
   },
