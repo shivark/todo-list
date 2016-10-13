@@ -1,4 +1,4 @@
-/// <reference path="../../../typings/index.d.ts" />
+
 namespace app.todolist{    
     export class todoListViewModel{
         

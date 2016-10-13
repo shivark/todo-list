@@ -1,3 +1,5 @@
+/// <reference path="../../../node_modules/@types/knockout/index.d.ts" />
+/// <reference path="../../../node_modules/@types/jquery/index.d.ts" />
 /// <reference path="todo-list-viewModel.ts" />
 namespace app.todolist {
     var data = [

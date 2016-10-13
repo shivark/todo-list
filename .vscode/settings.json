@@ -1,0 +1,14 @@
+  {
+  "editor.selectionHighlight": true,
+
+   "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/.map": true      
+    },
+    "editor.fontSize": 13,
+        "workbench.editor.enablePreview": false,
+        "workbench.editor.enablePreviewFromQuickOpen": false
+  }

@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         dest: 'scripts/js/app/',
         options: {
           module: 'amd', //or commonjs 
-          target: 'es5', //or es3 
+          target: 'es6', //or es3 
           sourceMap: false,
           declaration: false
         }
