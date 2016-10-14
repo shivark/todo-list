@@ -9,6 +9,5 @@
         "**/.map": true      
     },
     "editor.fontSize": 13,
-        "workbench.editor.enablePreview": false,
-        "workbench.editor.enablePreviewFromQuickOpen": false
-  }
+    "typescript.check.workspaceVersion": false
+}

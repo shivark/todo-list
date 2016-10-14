@@ -8,7 +8,7 @@ var app;
                 this.items = ko.observable(data);
             }
             return todoListViewModel;
-        })();
+        }());
         todolist.todoListViewModel = todoListViewModel;
     })(todolist = app.todolist || (app.todolist = {}));
 })(app || (app = {}));

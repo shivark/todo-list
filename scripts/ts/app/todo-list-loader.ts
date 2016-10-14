@@ -4,7 +4,8 @@
 namespace app.todolist {
     var data = [
         { id: 1, name: "Kiss Pashmi" },
-        { id: 2, name: "Make dinner" }
+        { id: 2, name: "Make dinner" },
+        { id: 3, name: "Sleep" },
     ];
 
     var viewModel = new todoListViewModel(data);

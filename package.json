@@ -20,7 +20,7 @@
     "karma-jasmine": "^1.0.2",
     "typescript": "^2.0.0",
     "@types/jasmine": "^2.5.35",
-    "@types/knockout": "^3.4.36"
+    "@types/knockout": "3.2.30"
   },
   "scripts": {
     "test": "test"

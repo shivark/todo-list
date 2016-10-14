@@ -1,6 +1,3 @@
-/// <reference path="../../../node_modules/@types/knockout/index.d.ts" />
-/// <reference path="../../../node_modules/@types/jquery/index.d.ts" />
-/// <reference path="todo-list-viewModel.ts" />
 var app;
 (function (app) {
     var todolist;
